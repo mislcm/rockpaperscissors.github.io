@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="home-container">
+  <h1>Welcome to Rock, Paper, Scissors!</h1>
+  <div class="options">
+    <label for="rounds">Choose Rounds (Best of):</label>
+    <select id="rounds">
+      <option value="1">1</option>
+      <option value="3" selected>3</option>
+      <option value="5">5</option>
+    </select>
+    <br>
+    <label for="difficulty">Choose Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <br>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+</div>
+
+<div id="game-container" style="display: none;">
+  <h1>Rock, Paper, Scissors Game</h1>
+  <div class="choices">
+    <button class="rock" onclick="playGame('rock')">Rock</button>
+    <button class="paper" onclick="playGame('paper')">Paper</button>
+    <button class="scissors" onclick="playGame('scissors')">Scissors</button>
+  </div>
+  <div id="result"></div>
+  <div id="score">Score: 0 - 0</div>
+  <div id="timer">Time Left: <span id="time-left">10</span> seconds</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
